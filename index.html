@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Winner-Takes-All Crowdfunding Test App</title>
+        <link rel="stylesheet" type="text/css" href="./css/foundation.min.css">
+        <style>
+            .status-info {
+                height: 100%;
+                background: #eee;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <div class="top-bar-right">
+                    <ul class="menu">
+                        <li class="menu-text">Winner Takes All Crowdfunding</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-6 columns">
+                <div class="row">
+                    <div class="small-12 columns">
+                        <ul class="accordion" data-accordion data-multi-expand="true">
+                            <li class="accordion-item is-active" data-accordion-item>
+                                <a href="#" class="accordion-title">Create Contract</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <label>Minimum Entry Fee:
+                                        <input id="entryFeeContract" type="number" placeholder="100">
+                                    </label>
+                                    <label>Project Proposal Deadline (Seconds from now):
+                                        <input id="proposalDeadline" type="number" placeholder="50">
+                                    </label>
+                                    <label>Campaign Deadline (Seconds from now):
+                                        <input id="campaignDeadline" type="number" placeholder="100">
+                                    </label>
+                                    <button id="contractBtn" type="button" class="success button expanded">Create</button>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Submit Project</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <label>From:
+                                        <select id="projectAddr">
+                                        </select>
+                                    </label>
+                                    <label>Name:
+                                        <input id="projectName" type="text" placeholder="Cool Project">
+                                    </label>
+                                    <label>URL:
+                                        <input id="projectURL" type="text" placeholder="https://www.coolproject.com">
+                                    </label>
+                                    <label>Entry Fee:
+                                        <input id="entryFeeProject" type="number" placeholder="100">
+                                    </label>
+                                    <button id="submitBtn" type="button" class="success button expanded">Submit</button>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Support Project</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <label>From:
+                                        <select id="supportFrom">
+                                        </select>
+                                    </label>
+                                    <label>Address:
+                                        <input id="supportAddr" type="text" placeholder="addr">
+                                    </label>
+                                    <label>Amount:
+                                        <input id="supportAmount" type="number" placeholder="100">
+                                    </label>
+                                    <button id="supportBtn" type="button" class="success button expanded">Support</button>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Finish Campaign</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <button id="finishBtn" type="button" class="alert button expanded">Finish</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="small-6 columns status-info">
+                <h4>Contract Information:</h4>
+                <div id="statuscontent">
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./js/vendor/jquery.js"></script>
+    <script src="./js/vendor/what-input.js"></script>
+    <script src="./js/vendor/foundation.js"></script>
+    <script src="./js/foundation.js"></script>
+    <script src="./js/async.min.js"></script>
+    <script src="./js/web3.min.js"></script>
+    <script src="./contract.js"></script>
+    <script src="./app.js"></script>
+</html>
