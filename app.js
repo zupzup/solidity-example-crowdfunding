@@ -139,6 +139,12 @@ $("#supportBtn").click(function() {
 });
 
 $("#finishBtn").click(function() {
-    crowdfunder.finish();
-    refreshData();
+    console.log('finished!');
+    crowdfunder.finish({from: web3.eth.accounts[0]}, function(err, data) {
+        if (err) {
+            console.error(err);
+        }
+        refreshData();
+    });
 });
+
